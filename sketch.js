@@ -1,6 +1,6 @@
 // MARK: p5.js
 
-const emojiUnicode = [ '😂', '😘', '😱', '🤤', '👻', '😈', '💩', '👁', '😵', '👨🏾‍💻' ];
+const emojiUnicode = [ '😂', '😘', '😱', '🤤', '👻', '😈', '💩', '👁', '😵', '👨🏾‍💻', '🧟‍♂️', '🧜🏾‍♂️', '🐛' ];
 let selectedEmoji = 0;
 
 function setup() {
@@ -26,11 +26,10 @@ function setup() {
 }
 
 function draw() {
-	if (mouseIsPressed) {
-		textSize(48);
-		text(emojiUnicode[selectedEmoji], mouseX, mouseY);
-	} else {
-		fill(255);
+	if (!mouseIsPressed) {
 		background(255);
 	}
+
+	textSize(48);
+	text(emojiUnicode[selectedEmoji], mouseX, mouseY);
 }
